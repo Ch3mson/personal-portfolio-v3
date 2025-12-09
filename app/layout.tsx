@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Lora } from "next/font/google";
 import "./globals.css";
+import LiquidEther from '@/components/LiquidEther';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +10,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const lora = Lora({
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
@@ -25,9 +31,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${lora.variable} antialiased`}
       >
-        {children}
+        <div className="fixed inset-0 -z-10">
+        <LiquidEther
+          colors={['#FFD1CA', '#E8B4AB', '#4A3845']}
+          mouseForce={20}
+          cursorSize={100}
+          autoDemo={true}
+          autoSpeed={0.3}
+          autoIntensity={1.5}
+          style={{ width: '100%', height: '100%' }}
+        />
+        </div>
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
