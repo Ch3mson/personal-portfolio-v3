@@ -54,7 +54,7 @@ export default function Home() {
 
           {/* Bio */}
           <p className="font-light leading-relaxed">
-            I build any type of software at a startup and enterprise scale. I&apos;ve worked TOO MUCH with Next.js. Hence  exploring AI/ML infra and scalable backend systems.
+            I build any type of software at a startup and enterprise scale. I&apos;ve worked TOO MUCH with Next.js, so I&apos;m exploring AI/ML infra and scalable backend systems.
           </p>
 
           {/* Current */}
