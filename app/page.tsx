@@ -25,7 +25,7 @@ const projects = [
   {
     name: "NattyNatt",
     href: "https://github.com/Ch3mson/nattynatt",
-    description: "Data science analysis on NattyNattys challenger climb",
+    description: "Data analysis on NattyNattys challenger climb",
   },
 ];
 
