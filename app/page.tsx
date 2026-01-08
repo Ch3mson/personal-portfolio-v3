@@ -3,6 +3,11 @@ import Link from "next/link";
 
 const projects = [
   {
+    name: "makebrainrot.com",
+    href: "https://makebrainrot.com/",
+    description: "Building and running UGC. 100+ users",
+  },
+  {
     name: "TopClip.ai",
     href: "https://www.topclip.ai/",
     description: "AI YouTube clipping tool. 70,000+ users",
@@ -75,7 +80,7 @@ export default function Home() {
 
           {/* Bio */}
           <p className="font-light leading-relaxed">
-            I build any type of software at a startup and enterprise scale. I&apos;ve worked TOO MUCH with Next.js, so I&apos;m exploring AI/ML infra and scalable backend systems.
+            I build any type of software at a startup and enterprise scale. Currently exploring AI/ML infra and scalable backend systems and bootstrapping + running UGC in my free time.
           </p>
 
           {/* Current */}
