@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { getAllPosts } from "@/lib/mdx";
 
 export default function Blog() {
+  const posts = getAllPosts();
+
   return (
     <div className="min-h-screen">
       <main className="relative z-10 mx-auto max-w-[550px] px-6 pt-16 md:pt-24 md:px-0">
@@ -32,8 +35,32 @@ export default function Blog() {
             <p className="text-sm text-neutral-400">Thoughts and writings</p>
           </div>
 
-          {/* Empty state */}
-          <p className="text-neutral-400 italic">Coming soon...</p>
+          {/* Posts list */}
+          {posts.length === 0 ? (
+            <p className="text-neutral-400 italic">Coming soon...</p>
+          ) : (
+            <ul className="flex flex-col gap-4">
+              {posts.map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col gap-1"
+                  >
+                    <span className="text-neutral-200 group-hover:text-primary transition-colors">
+                      {post.title}
+                    </span>
+                    <span className="text-sm text-neutral-500">
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </main>
     </div>

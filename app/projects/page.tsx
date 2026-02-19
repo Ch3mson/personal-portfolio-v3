@@ -4,7 +4,7 @@ const projects = [
   {
     name: "TopClip.ai",
     href: "https://www.topclip.ai/",
-    description: "AI YouTube clipping tool. 70,000+ users",
+    description: "AI YouTube clipping tool. 100,000+ registered users",
   },
   {
     name: "BetterWrite.ai",
