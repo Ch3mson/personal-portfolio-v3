@@ -106,6 +106,27 @@ export default function Home() {
                 </Link>
               </span>
             </li>
+            <li className="group flex items-start gap-3 pl-4 relative">
+              <div className="absolute left-0 top-[9px] w-[5px] h-[5px] bg-neutral-400 rotate-45" />
+              <span className="inline-flex items-center gap-1.5">
+                Engineering {" "}
+                <Image
+                  src="/sequence.jpeg"
+                  alt="Sequence Holdings logo"
+                  width={22}
+                  height={22}
+                  className="rounded object-cover aspect-square"
+                />
+                <Link
+                  href="https://sequenceholdings.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-100 hover:text-primary transition-colors underline underline-offset-2"
+                >
+                  Sequence Holdings
+                </Link>
+              </span>
+            </li>
           </ul>
 
           {/* Projects Section */}
@@ -139,7 +160,7 @@ export default function Home() {
                 <li key={exp.company} className="relative flex items-start gap-3">
                   <span className="absolute -left-4 top-0.5 text-neutral-500">↳</span>
                   <span className="inline-flex items-center gap-1.5">
-                    {exp.role} @{" "}
+                    {exp.role} {" "}
                     <Image
                       src={exp.icon}
                       alt={`${exp.company} logo`}
