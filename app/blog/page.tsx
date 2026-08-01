@@ -6,7 +6,7 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen">
-      <main className="relative z-10 mx-auto max-w-[550px] px-6 pt-16 md:pt-24 md:px-0">
+      <main className="relative z-10 mx-auto max-w-[550px] px-6 py-16 md:py-24 md:px-0">
         <div className="flex flex-col gap-6 text-neutral-300">
           {/* Navbar */}
           <nav>
