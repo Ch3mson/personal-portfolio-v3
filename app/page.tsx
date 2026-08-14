@@ -27,11 +27,6 @@ const projects = [
     href: "https://github.com/krishchopra/veyesor",
     description: "Live panoramic video stitcher. McHacks 2025 winner",
   },
-  {
-    name: "NattyNatt",
-    href: "https://github.com/Ch3mson/nattynatt",
-    description: "Data analysis on NattyNattys challenger climb",
-  },
 ];
 
 const experience = [
@@ -75,12 +70,12 @@ export default function Home() {
           {/* Header */}
           <div className="flex flex-col gap-2">
             <h1 className="font-semibold text-2xl font-serif text-primary">Benson Yan</h1>
-            <p className="text-sm text-neutral-400">San Francisco, CA</p>
+            <p className="text-sm text-neutral-400">New York City, NY</p>
           </div>
 
           {/* Bio */}
           <p className="font-light leading-relaxed">
-            I build any type of software at a startup and enterprise scale. Currently exploring AI/ML infra and scalable backend systems and bootstrapping + running UGC in my free time.
+            I build any type of software at a startup and enterprise scale. Currently an FDE, working closely and building software for bankers. On my free time, I bootstrap apps, got angel investments, recruit, and run UGC.
           </p>
 
           {/* Current */}
@@ -125,6 +120,79 @@ export default function Home() {
                 >
                   Sequence Holdings
                 </Link>
+              </span>
+            </li>
+            <li className="group flex items-start gap-3 pl-4 relative">
+              <div className="absolute left-0 top-[9px] w-[5px] h-[5px] bg-neutral-400 rotate-45" />
+              <span>
+                Co-founder @{" "}
+                <Link
+                  href="https://antigpt.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-100 hover:text-primary transition-colors underline underline-offset-2"
+                >
+                  AntiGPT
+                </Link>
+              </span>
+            </li>
+            <li className="group flex items-start gap-3 pl-4 relative">
+              <div className="absolute left-0 top-[9px] w-[5px] h-[5px] bg-neutral-400 rotate-45" />
+              <span className="inline-flex flex-wrap items-center gap-x-1.5 gap-y-1">
+                Recruiting @
+                <span className="inline-flex items-center gap-1.5">
+                  <Image
+                    src="/whop.png"
+                    alt="Whop logo"
+                    width={22}
+                    height={22}
+                    className="rounded object-cover aspect-square"
+                  />
+                  <Link
+                    href="https://whop.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-100 hover:text-primary transition-colors underline underline-offset-2"
+                  >
+                    Whop
+                  </Link>
+                </span>
+                ,
+                <span className="inline-flex items-center gap-1.5">
+                  <Image
+                    src="/tennr.png"
+                    alt="Tennr logo"
+                    width={22}
+                    height={22}
+                    className="rounded object-cover aspect-square"
+                  />
+                  <Link
+                    href="https://tennr.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-100 hover:text-primary transition-colors underline underline-offset-2"
+                  >
+                    Tennr
+                  </Link>
+                </span>
+                ,
+                <span className="inline-flex items-center gap-1.5">
+                  <Image
+                    src="/viewmax.png"
+                    alt="Viewmax.io logo"
+                    width={22}
+                    height={22}
+                    className="rounded object-cover aspect-square"
+                  />
+                  <Link
+                    href="https://viewmax.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-100 hover:text-primary transition-colors underline underline-offset-2"
+                  >
+                    Viewmax.io
+                  </Link>
+                </span>
               </span>
             </li>
           </ul>
