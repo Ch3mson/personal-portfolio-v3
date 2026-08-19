@@ -113,7 +113,7 @@ export default function Home() {
                   className="rounded object-cover aspect-square"
                 />
                 <Link
-                  href="https://sequenceholdings.com"
+                  href="https://seqholdings.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-100 hover:text-primary transition-colors underline underline-offset-2"
