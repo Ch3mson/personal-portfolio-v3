@@ -32,12 +32,12 @@ export default function Projects() {
   return (
     <div className="min-h-screen">
       <main className="relative z-10 mx-auto max-w-[550px] px-6 pt-16 md:pt-24 md:px-0">
-        <div className="flex flex-col gap-6 text-neutral-300">
+        <div className="flex flex-col gap-6 text-foreground">
           {/* Navbar */}
           <nav>
             <ul className="flex space-x-8">
               <li>
-                <Link href="/" className="text-lg text-neutral-400 hover:text-primary transition-colors">
+                <Link href="/" className="text-lg text-muted-foreground hover:text-primary transition-colors">
                   About
                 </Link>
               </li>
@@ -47,7 +47,7 @@ export default function Projects() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-lg text-neutral-400 hover:text-primary transition-colors">
+                <Link href="/blog" className="text-lg text-muted-foreground hover:text-primary transition-colors">
                   Blog
                 </Link>
               </li>
@@ -57,20 +57,20 @@ export default function Projects() {
           {/* Header */}
           <div className="flex flex-col gap-2">
             <h1 className="font-semibold text-2xl font-serif text-primary">Projects</h1>
-            <p className="text-sm text-neutral-400">Things I&apos;ve built</p>
+            <p className="text-sm text-muted-foreground">Things I&apos;ve built</p>
           </div>
 
           {/* Projects List */}
           <ul className="flex flex-col gap-4 text-base">
             {projects.map((project) => (
               <li key={project.name} className="relative flex items-start gap-3 pl-4">
-                <span className="absolute -left-0 top-0.5 text-neutral-500">↳</span>
+                <span className="absolute -left-0 top-0.5 text-muted-foreground">↳</span>
                 <span>
                   <Link
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-100 hover:text-primary transition-colors underline underline-offset-2"
+                    className="text-foreground hover:text-primary transition-colors underline underline-offset-2"
                   >
                     {project.name}
                   </Link>
