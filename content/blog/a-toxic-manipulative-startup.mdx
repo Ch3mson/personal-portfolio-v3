@@ -1,0 +1,85 @@
+---
+title: "A toxic, manipulative startup"
+date: "2026-08-21"
+description: ""
+---
+
+Around February of 2025, I cold DM'd a fairly unknown pre-seed startup on Twitter. Six months later, in August, I got a reply asking to schedule an initial interview, and shortly after that I started a paid work trial.
+
+I had just finished two final exams with three more left in the span of a week. The offer was that I finish the trial project in three days and get paid a decent chunk of cash.
+
+As I built it and sent frequent updates back, the two co-founders were impressed and wanted to extend the trial, offering an even larger chunk of cash to bring it to the finish line. That project became [redacted].
+
+## The offer
+
+I already had an internship offer, so I had two choices: accept the stable six-figure internship, or renege on it to work at a startup where I'd be the only engineer for half the pay and twice the work.
+
+Knowing that the app I'd just built was already generating revenue and had a couple thousand users, I reneged and joined as a founding engineer on a one-year cliff.
+
+## Beginnings
+
+The first month and a half was fine. Wake up for standup, plan out the day, work, iterate, see results. I built a genuinely robust product that supported over 2,000 active paying users queueing up video processing jobs. This was not a trivial task, as it took me two months straight to get it to a maintainable place where I didn't need to be permanently on call.
+
+In early September, I visited their office in New York. First impressions were great. We had good conversations, I got to know the co-founders, and we worked in person for the first time. We talked about the thesis and the pitch, and how the fundraise strategy was going. In general, I had good hopes of the startup raising, considering how much revenue [redacted] was generating.
+
+## Shaky promises
+
+The carrot on the stick was that my salary would be backdated and significantly increased once they closed a seed round. Since August, the two co-founders had been saying they were in the middle of raising, planning to close mid-September, with several investors interested. It was going to be a smooth process.
+
+For the next few weeks I was mostly heads-down. I asked for a fundraising update once a week, and the answer always came back the same: it's going great, investor calls are going well, we're getting lots of warm intros, we'll have a term sheet soon.
+
+What's crazy is that the answer stayed exactly the same for over 10 weeks.
+
+## Where things get crazy
+
+By late October, I started raising concerns. The first was that reality was completely out of alignment with the initial promises about how the fundraise would go. The second was that they never gave a valid reason for how you can run a raise for over two months and not land a single term sheet.
+
+As a result, the tone shifted. Suddenly, any failure in the fundraise or the product got blamed on me. Arguments were basically impossible to win, because they were brothers and always agreed with whatever the other one said.
+
+On October 20th, the famous AWS outage happened. All of our apps went down, and at 4am I was called and yelled at for why every service was offline. Keep in mind, I had worked until midnight that night dealing with a series of webhook issues on [redacted]. At the next day's standup, it was framed as the outage costing them money and a loss of investor confidence. Which is straight up bullshit, because wtf am i supposed to do if AWS is down.
+
+The next incident happened when I was increasing the volume size of the EC2 instance the backend lived on. There was a daily export of a fairly large .pkl file, so the 20GB volume was going to fill up eventually. It was obvious this had happened, because I couldn't even SSH in properly, there wasn't enough space left on the instance to install what VS Code needed on the remote end. So I increased the volume and expanded the OS partition to match. That's the correct fix. It was not malpractice, and it was not "intentionally" breaking the service.
+
+The following day, the EC2 instance became unresponsive and I was pulled on call at 7am to fork the contents of the old volume onto a new one, redo the nginx config, and redeploy the entire backend. Which I did, immediately. What's absurd is that the co-founders treated this as proof that I was incompetent and had single-handedly broken the service. And again, lost them tens of thousands of dollars.
+
+I could go on about how many times blame suddenly landed on me. Another example: implementing Facebook CAPI and Pixel across two different websites with complicated billing patterns, including free trial conversions. At the time, Opus 4.1 couldn't one-shot that implementation the way Opus 5 can. It took a lot of time to build it against Stripe, test it, and get it working in production. But when the conversion score didn't max out. And guess what? I was losing the company money and jeopardizing the fundraise again.
+
+Now, this last one might be my fault. And I will leave it to the readers interpretation to determine whether it was my fault. 
+
+A troll LinkedIn account had a profile picture of George Floyd and a description claiming it worked at a fentanyl nuclear reactor. It was obviously fake, which is why I tweeted a screenshot of it captioned "wtf is this?" Nothing I typed out in the post was meant to be offensive or racist toward anyone. But to these guys, it was like I had committed a crime.
+
+The afternoon after this tweet was posted, they called and told me an investor had backed out of an investment because he saw my tweet. Then they called me a retard, along with several other slurs, for an hour straight. I get that losing an investor is terrible. But would an investor who genuinely believed in the company really pull out instantly over that? And if so, why was this the only "confirmed" term sheet after two months of nothing?
+
+## Questional practices
+
+My contract said I'd get a raise after two months if the company hadn't raised money — no exceptions. Around this time, I asked for it. But because of my "incompetent" actions and being a "racist," they refused.
+
+A week later, I gave my two weeks' notice and told them I was going back to school. I also started taking the work more lightly, working half days and staying on call in case anything broke. Circling back, the EC2 volume incident above happened around this time.
+
+## "We have a super important investor meeting"
+
+[Redacted] is a difficult accelerator to get into. Definitely not one built for non-technical co-founders. But they told me they were in the final round and that it would be useful for me to be in the Bay Area with them. So I flew down and stayed for half a week on standby.
+
+I arrived on a Thursday, and around dinner time I went to their hotel room to discuss my decision to leave. The three of us talked in that room for three hours straight.
+
+It started with compliments — how great my work had been, what a great engineer I was, how much potential I had. Then it moved to why I wanted to leave, which was simply that I wanted to explore other opportunities at a bigger engineering org. Then it spiraled. If I left, I'd be causing the company harm. Investors would be angry. They had hyped me up to those investors, so leaving meant I was sabotaging their fundraise. They also claimed they'd talked to their "Thiel Fellow friends" about how I broke prod, never apologized for it (I did, and I fixed it), and was a "racist." Which I'm obviously not.
+
+They extended that by saying those people told them I should have been fired ages ago and expelled from Waterloo. They said I should be grateful the company still had me, and that I should be begging them for mercy. Furthermore, they said they will not be paying for those two weeks of work, and must redeem myself in order to be considered for any future raise.
+
+## The second three-hour conversation
+
+The first conversation was Thursday. The second was Saturday night. Going into it, there was still no conclusion on whether I was staying.
+
+That second conversation ended up being them convincing me they could take legal action against me if I left and "sabotaged" them. If I left, the investors would pull out, and I would face direct consequences for whatever amount was lost. Then they pressured me into opening my laptop and deleting my resignation email, to confirm I'd take the next semester off to keep working for them and help them raise the seed.
+
+Obviously, in a 2v1, you end up agreeing with whatever they say. In both conversations, they also made me prove I wasn't recording. By the end of the second one I was just agreeing with everything to get out of a one-sided conversation, which is what finally ended it — three hours later.
+
+The next day I flew back to Vancouver, sent a new resignation letter with immediate effect, and blocked both of their phone numbers.
+
+## Lessons
+
+I'm writing this as a lesson for anyone who might end up in a toxic work environment. Every startup needs a pitch, and the pitch almost always sounds better than the reality. People who are younger and less experienced in the job market can be convinced they've found a once-in-a-lifetime opportunity to build something generational.
+
+In most of these situations, the startup goes to zero and you've wasted your time on the wrong sequence of choices. In this story's case, that would have been letting them convince me that school didn't matter and I should drop out.
+
+And for the people at startups where it does work out — they're the exception.
