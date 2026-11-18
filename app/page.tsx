@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const projects = [
   {
-    name: "makebrainrot.com",
-    href: "https://makebrainrot.com/",
-    description: "Building and running UGC. 100+ users",
+    name: "AntiGPT",
+    href: "https://antigpt.me",
+    description: "Building and running UGC. 2,000+ users",
   },
   {
     name: "TopClip.ai",
@@ -75,7 +75,7 @@ export default function Home() {
 
           {/* Bio */}
           <p className="font-light leading-relaxed">
-            I build any type of software at a startup and enterprise scale. Currently an FDE, working closely and building software for bankers. On my free time, I bootstrap apps, got angel investments, recruit, and run UGC.
+            I build any type of software at a startup and enterprise scale. Currently an FDE, working closely and building software for bankers. On my free time, I bootstrap apps, got angel investments, and run UGC.
           </p>
 
           {/* Current */}
@@ -134,65 +134,6 @@ export default function Home() {
                 >
                   AntiGPT
                 </Link>
-              </span>
-            </li>
-            <li className="group flex items-start gap-3 pl-4 relative">
-              <div className="absolute left-0 top-[9px] w-[5px] h-[5px] bg-muted-foreground rotate-45" />
-              <span className="inline-flex flex-wrap items-center gap-x-1.5 gap-y-1">
-                Recruiting @
-                <span className="inline-flex items-center gap-1.5">
-                  <Image
-                    src="/whop.png"
-                    alt="Whop logo"
-                    width={22}
-                    height={22}
-                    className="rounded object-cover aspect-square"
-                  />
-                  <Link
-                    href="https://whop.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors underline underline-offset-2"
-                  >
-                    Whop
-                  </Link>
-                </span>
-                ,
-                <span className="inline-flex items-center gap-1.5">
-                  <Image
-                    src="/tennr.png"
-                    alt="Tennr logo"
-                    width={22}
-                    height={22}
-                    className="rounded object-cover aspect-square"
-                  />
-                  <Link
-                    href="https://tennr.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors underline underline-offset-2"
-                  >
-                    Tennr
-                  </Link>
-                </span>
-                ,
-                <span className="inline-flex items-center gap-1.5">
-                  <Image
-                    src="/viewmax.png"
-                    alt="Viewmax.io logo"
-                    width={22}
-                    height={22}
-                    className="rounded object-cover aspect-square"
-                  />
-                  <Link
-                    href="https://viewmax.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors underline underline-offset-2"
-                  >
-                    Viewmax.io
-                  </Link>
-                </span>
               </span>
             </li>
           </ul>
